@@ -1,0 +1,24 @@
+name: Create Pull Request
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  create_pr:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Create PR
+      uses: repo-sync/pull-request@v2
+      with:
+        destination_branch: "main" # Altere para o nome da branch de destino onde você deseja que o PR seja criado
+        pr_title: "PR criada automáticamente"
+        pr_body: "Implementar o body da PR."
+        pr_reviewer: "patrickpr86" # Altere para o nome dos revisores se desejar
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+
