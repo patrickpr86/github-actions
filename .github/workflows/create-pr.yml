@@ -34,8 +34,8 @@ jobs:
           labels: |
             report
             automated pr
-          assignees: your-username
-          reviewers: your-reviewer-username
+          assignees: til_ppascoal
+          reviewers: til_ppascoal
           team-reviewers: |
             team-name1
             team-name2
