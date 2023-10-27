@@ -2,7 +2,7 @@ name: Auto Create Pull Request
 
 on:
   push:
-    branches-ignore:
+    branches:
       - main
       - master
 
