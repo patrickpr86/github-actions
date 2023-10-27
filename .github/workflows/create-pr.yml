@@ -23,3 +23,7 @@ jobs:
           gh pr create --base main --head $PR_BRANCH_NAME --title "Auto PR from $PR_BRANCH_NAME" --body "Automated PR for changes made in $PR_BRANCH_NAME"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SMTP_HOST: smtp-mail.gmail.com
+          SMTP_PORT: 587
+          SMTP_USERNAME: papaction
+          SMTP_PASSWORD: "@123dede"
