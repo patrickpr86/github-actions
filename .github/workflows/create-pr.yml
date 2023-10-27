@@ -17,11 +17,11 @@ jobs:
           node-version: '16.x'
 
       - name: Checkout code
-        uses: actions/checkout@v3 # atualizado para a versão mais recente
+        uses: actions/checkout@v2
 
       - name: Create PR using GitHub CLI
         run: |
           PR_BRANCH_NAME=$(echo ${GITHUB_REF#refs/heads/})
-          echo ${{ secrets.GITHUB_TOKEN }} | gh pr create --base main --head $PR_BRANCH_NAME --title "Auto PR from $PR_BRANCH_NAME" --body "Automated PR for changes made in $PR_BRANCH_NAME" --repo ${{ github.repository }}
+          gh pr create --base main --head $PR_BRANCH_NAME --title "Auto PR from $PR_BRANCH_NAME" --body "Automated PR for changes made in $PR_BRANCH_NAME" --repo ${{ github.repository }}
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
