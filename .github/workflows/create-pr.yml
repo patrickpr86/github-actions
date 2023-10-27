@@ -34,7 +34,7 @@ jobs:
           labels: |
             report
             automated pr
-          assignees: til_ppascoal
+          assignees: patrickpr86
           reviewers: til_ppascoal
           team-reviewers: |
             team-name1
