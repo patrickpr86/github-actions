@@ -24,7 +24,7 @@ jobs:
           author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
           branch: example-patches
           delete-branch: true
-          title: '[Example] Update report'
+          title: '[FEAT] PR CRIADA AUTOMATICAMENTE'
           body: |
             Update report
             - Updated with *today's* date
