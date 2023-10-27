@@ -18,7 +18,7 @@ jobs:
         id: cpr
         uses: peter-evans/create-pull-request@v5
         with:
-          token: ${{ secrets.github_pat }} # Usar o token padrão do GitHub
+          token: ${{ secrets.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 }} # Usar o token padrão do GitHub
           commit-message: Update report
           committer: GitHub <noreply@github.com>
           author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
