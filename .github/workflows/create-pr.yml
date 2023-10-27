@@ -9,7 +9,7 @@ jobs:
   createPullRequest:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v2
 
       - name: Make changes to pull request
         run: date +%s > report.txt
@@ -18,7 +18,7 @@ jobs:
         id: cpr
         uses: peter-evans/create-pull-request@v5
         with:
-          token: ${{ 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 }}
+          token: ${{ secrets.MY_GITHUB_PAT }}
           commit-message: Update report
           committer: GitHub <noreply@github.com>
           author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
@@ -34,10 +34,11 @@ jobs:
           labels: |
             report
             automated pr
-          assignees: peter-evans
-          reviewers: peter-evans
+          # Atualize os assignees, reviewers e team-reviewers de acordo com o seu repositório
+          assignees: your-username
+          reviewers: your-reviewer-username
           team-reviewers: |
-            developers
-            qa-team
+            team-name1
+            team-name2
           milestone: 1
           draft: false
