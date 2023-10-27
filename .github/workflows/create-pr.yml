@@ -41,3 +41,17 @@ jobs:
             team-name2
           milestone: "Versão 1.0"
           draft: false
+
+      - name: Enviar E-mail
+        uses: softprops/action-email@v1
+        with:
+          to: sh4dbr@gmail.com
+          from: papaction@gmail.com
+          host: ${{ env.SMTP_HOST }}
+          port: ${{ env.SMTP_PORT }}
+          username: ${{ env.SMTP_USERNAME }}
+          password: ${{ env.SMTP_PASSWORD }}
+          subject: "teste actions"
+          message: "Corpo do E-mail gerado pelo action"
+
+
