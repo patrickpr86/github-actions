@@ -42,3 +42,20 @@ jobs:
           milestone: "Versão 1.0"
           draft: false
 
+  enviar_email:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do Código
+        uses: actions/checkout@v2
+
+      - name: Enviar E-mail
+        uses: dawidd6/action-send-mail@v2
+        with:
+          server_address: smtp.hotmail.com
+          server_port: 587
+          username: sh4d_br@hotmail.com
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: "Email from github actions"
+          to: sh4dbr@gmail.com
+          from: sh4d_br@hotmail.com
+          body: "Corpo do E-mail gerado pelo actions"
