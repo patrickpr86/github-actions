@@ -1,0 +1,25 @@
+name: Enviar E-mail
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  enviar_email:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do Código
+        uses: actions/checkout@v2
+
+      - name: Enviar E-mail
+        uses: dawidd6/action-send-mail@v2
+        with:
+          server_address: ${{ env.SMTP_HOST }}
+          server_port: ${{ env.SMTP_PORT }}
+          username: ${{ env.SMTP_USERNAME }}
+          password: ${{ env.SMTP_PASSWORD }} # Configure a senha como secret
+          subject: "Email from github actions"
+          to: sh4dbr@gmail.com
+          from: papaction@gmail.com
+          body: "Corpo do E-mail gerado pelo actions"
