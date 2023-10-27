@@ -1,20 +1,17 @@
-name: Auto Create Pull Request
+name: Create PR on push
 
 on:
   push:
     branches:
       - main
+
 jobs:
-  create_pr:
+  create-pr:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3 # Atualize para a versão mais recente se estiver disponível
-
       - name: Create PR
-        uses: peter-evans/create-pull-request@v4 # Atualize para a versão mais recente se estiver disponível
+        uses: actions/create-pull-request@1.19.0
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          title: "Auto PR from ${{ github.ref }}"
-          body: "Automated PR for changes made in ${{ github.ref }}"
+          title: "New feature"
+          body: "This PR adds a new feature."
+          head: main
