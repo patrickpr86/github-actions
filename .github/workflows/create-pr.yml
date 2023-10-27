@@ -39,5 +39,5 @@ jobs:
           team-reviewers: |
             team-name1
             team-name2
-          milestone: 1
+          milestone: "Versão 1.0"
           draft: false
