@@ -12,10 +12,10 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3 # Atualize para a versão mais recente se estiver disponível
 
       - name: Create PR
-        uses: peter-evans/create-pull-request@v3
+        uses: peter-evans/create-pull-request@v4 # Atualize para a versão mais recente se estiver disponível
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           title: "Auto PR from ${{ github.ref }}"
