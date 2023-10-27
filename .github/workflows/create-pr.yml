@@ -35,7 +35,7 @@ jobs:
             report
             automated pr
           assignees: patrickpr86
-          reviewers: til_ppascoal
+          reviewers: patrickpr86
           team-reviewers: |
             team-name1
             team-name2
