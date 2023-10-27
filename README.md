@@ -1,2 +1,2 @@
 # github-actions
-* sample2
+* sample22
