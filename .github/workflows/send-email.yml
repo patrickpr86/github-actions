@@ -15,10 +15,10 @@ jobs:
       - name: Enviar E-mail
         uses: dawidd6/action-send-mail@v2
         with:
-          server_address: ${{ env.SMTP_HOST }}
-          server_port: ${{ env.SMTP_PORT }}
-          username: ${{ env.SMTP_USERNAME }}
-          password: ${{ env.SMTP_PASSWORD }} # Configure a senha como secret
+          server_address: smtp.gmail.com
+          server_port: 587
+          username: papaction@gmail.com
+          password: @123dede
           subject: "Email from github actions"
           to: sh4dbr@gmail.com
           from: papaction@gmail.com
