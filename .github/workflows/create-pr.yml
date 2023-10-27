@@ -51,7 +51,7 @@ jobs:
       - name: Enviar E-mail
         uses: dawidd6/action-send-mail@v2
         with:
-          server_address: smtp.hotmail.com
+          server_address: smtp-mail.outlook.com
           server_port: 587
           username: sh4d_br@hotmail.com
           password: ${{ secrets.EMAIL_PASSWORD }}
