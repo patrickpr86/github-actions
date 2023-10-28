@@ -1,0 +1,31 @@
+name: Mover Cartão Jira para Code Review
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+
+jobs:
+  move_card:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v2
+
+      - name: Mover Cartão no Jira
+        run: |
+          JIRA_API_TOKEN="${{ secrets.JIRA_API_TOKEN }}"
+          PR_URL="${{ github.event.pull_request.html_url }}"
+
+          # Use as informações da PR para determinar qual cartão Jira está relacionado
+          # e mova-o para a coluna "Code Review" (ajuste de acordo com seu quadro Jira).
+          # Exemplo hipotético usando curl e a API do Jira:
+          # curl -X POST -H "Authorization: Basic $JIRA_API_TOKEN" \
+          #     -H "Content-Type: application/json" \
+          #     -d '{"transition": {"id": "transition_id"}}' \
+          #     "https://your-jira-instance.atlassian.net/rest/api/3/issue/JIRA-123/transitions"
+
+          # Lembre-se de configurar corretamente a chamada à API do Jira para mover o cartão.
+        env:
+          JIRA_API_TOKEN: ${{ secrets.JIRA_API_TOKEN }}
