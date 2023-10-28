@@ -18,11 +18,12 @@ jobs:
         id: cpr
         uses: peter-evans/create-pull-request@v5
         with:
-          token: ${{ secrets.PAPARIB }} # Usar o token padrão do GitHub
+          token: ${{ secrets.PAPARIB }}
           commit-message: Update report
           committer: GitHub <noreply@github.com>
           author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
           branch: example-patches
+          base: main
           delete-branch: true
           title: '[FEAT] PR CRIADA AUTOMATICAMENTE!!'
           body: |
