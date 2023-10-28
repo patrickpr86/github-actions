@@ -31,7 +31,7 @@ jobs:
           labels: |
             report
             automated pr
-          template: template/pr-template.md
+          body-path: ./template/pr-template.md
           assignees: patrickpr86
           reviewers: patrickpr86
           team-reviewers: |
