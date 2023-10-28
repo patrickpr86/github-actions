@@ -24,7 +24,7 @@ jobs:
           author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
           branch: example-patches
           delete-branch: true
-          title: '[FEAT] PR CRIADA AUTOMATICAMENTE!'
+          title: '[FEAT] PR CRIADA AUTOMATICAMENTE!!'
           body: |
             PR criada automaticamente
 
